@@ -4,4 +4,5 @@ mod helpers;
 
 fn main() {
     day_1::trebuchet::answers();
+    day_2::cube_conundrum::answers();
 }
