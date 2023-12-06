@@ -1,5 +1,5 @@
-use std::fs::File;
-use std::io::{prelude::*, BufReader};
+use crate::helpers::helpers;
+use std::io::{prelude::*};
 
 pub fn answers() {
     println!("-- Day One Answers --");
@@ -11,7 +11,7 @@ pub fn answers() {
 }
 
 pub fn part_one() -> i32 {
-    let reader = get_file_reader();
+    let reader = helpers::get_file_reader("day_1");
 
     const RADIX: u32 = 10;
     let mut total = 0;
@@ -32,7 +32,7 @@ pub fn part_one() -> i32 {
 }
 
 pub fn part_two() -> i32 {
-    let reader = get_file_reader();
+    let reader = helpers::get_file_reader("day_1");
 
     const RADIX: u32 = 10;
     let mut total = 0;
@@ -60,12 +60,4 @@ pub fn part_two() -> i32 {
     }
 
     return total;
-}
-
-fn get_file_reader() -> BufReader<File> {
-    let file = match File::open("./src/day_1/input.txt") {
-        Ok(file) => file,
-        Err(err) => panic!("Failed to open file: {}", err),
-    };
-    return BufReader::new(file);
 }
