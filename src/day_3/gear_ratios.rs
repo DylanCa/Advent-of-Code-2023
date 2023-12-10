@@ -83,7 +83,7 @@ fn check_is_connected(mut row_x: usize, char_y: usize, matrice: Vec<Vec<char>>) 
 }
 
 fn part_two() -> i32 {
-    todo!("Must finish this exercise");
+    // Must finish this exercise");
     let matrice = get_matrice();
 
     let mut gear_ratio_sum: i32 = 0;
